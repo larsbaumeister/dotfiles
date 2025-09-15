@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 link_file() {
     local src="$1"
     local dest="$2"
+
+    # Ensure parent directory exists
+    mkdir -p "$(dirname "$dest")"
 
     if [ -e "$dest" ] || [ -L "$dest" ]; then
         echo "Removing existing file or directory: $dest"
@@ -27,9 +30,8 @@ link_file "$DOTFILES_DIR/.tmux/plugins/tpm" "$HOME/.tmux/plugins/tpm"
 # Neovim: link entire config directory
 link_file "$DOTFILES_DIR/.config/nvim" "$HOME/.config/nvim"
 
-# git
+# Git
 link_file "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
-echo "All dotfiles linked successfully!"
-
+echo "✅ All dotfiles linked successfully!"
 
