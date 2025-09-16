@@ -1,5 +1,7 @@
-# Set up the prompt
+export TERM="xterm-256color"
+export COLORTERM=truecolor
 
+# Set up the prompt
 autoload -Uz promptinit
 promptinit
 prompt adam1
