@@ -49,6 +49,7 @@ eval "$(oh-my-posh init zsh --config 'amro')"
 alias ll="ls -l"
 alias la="ls -la"
 export PATH="$PATH:/opt/nvim/bin"
+export PATH=$PATH:"/opt/go/bin"
 
 . "$HOME/.cargo/env"
 

@@ -15,13 +15,9 @@ return {
         -- install formatters
         "stylua",
 
-        -- install debuggers
-        "debugpy",
-
         -- install any other package
         "tree-sitter-cli",
 
-        "typescript-language-server",
         "tailwindcss-language-server",
         "svelte-language-server",
       },
