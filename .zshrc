@@ -1,6 +1,10 @@
 export TERM="xterm-256color"
 export COLORTERM=truecolor
 
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
@@ -44,7 +48,9 @@ eval "$(oh-my-posh init zsh --config 'amro')"
 
 alias ll="ls -l"
 alias la="ls -la"
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/opt/nvim/bin"
+
+. "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -54,6 +60,3 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
