@@ -8,8 +8,12 @@ return {
           configuration = {
             runtimes = {
               {
-                name = "JavaSE-24",
-                path = "/home/lars/.sdkman/candidates/java/24-tem",
+                name = "JavaSE-25",
+                path = "/home/lars/.sdkman/candidates/java/25-tem",
+              },
+              {
+                name = "JavaSE-21",
+                path = "/home/lars/.sdkman/candidates/java/21-tem",
               },
             },
           },
