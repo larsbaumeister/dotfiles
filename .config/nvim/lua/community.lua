@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.search.nvim-spectre" },
   { import = "astrocommunity.lsp.lspsaga-nvim"},
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },

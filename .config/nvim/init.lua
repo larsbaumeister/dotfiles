@@ -23,6 +23,37 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- Global Keymaps
+
+-- Next Quickfix with wrap-around
+vim.keymap.set('n', '<C-f>', function()
+  if not pcall(vim.cmd, 'cnext') then
+    vim.cmd('cfirst')
+  end
+end, { desc = 'Next Quickfix' })
+
+-- Previous Quickfix with wrap-around
+vim.keymap.set('n', '<C-r>', function()
+  if not pcall(vim.cmd, 'cprev') then
+    vim.cmd('clast')
+  end
+end, { desc = 'Previous Quickfix' })
+
+-- Next Quickfix file
+vim.keymap.set('n', '<C-g>', function ()
+  if not pcall(vim.cmd, 'cnfile') then
+    vim.cmd('cfirst')
+  end
+end, { desc = 'Next Quickfix file'})
+
+-- Previous Quickfix file
+vim.keymap.set('n', '<C-t>', function ()
+  if not pcall(vim.cmd, 'cpfile') then
+    vim.cmd('clast')
+  end
+end, { desc = 'Previous Quickfix file'})
+
+
 require "lazy_setup"
 require "polish"
 
