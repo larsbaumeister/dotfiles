@@ -1,0 +1,5 @@
+# Never commit secrets or machine state, even if they end up in a package dir
+*.local
+*.local.*
+**/credentials*
+**/fish_variables
